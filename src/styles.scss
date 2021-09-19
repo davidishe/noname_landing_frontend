@@ -1,0 +1,111 @@
+@import "~@angular/material/theming";
+@import "./styles/variables.scss";
+@import "./styles/breadcrumb.scss";
+@import "./styles/colors.scss";
+@import "./styles/custom-material.scss";
+@import "./styles/buttons.scss";
+@import "./styles/global.scss";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
+
+@include mat-core();
+
+$my-theme-primary: mat-palette($mat-grey, A700, A800, A900);
+$my-theme-accent: mat-palette($mat-pink, A200, A100, A400);
+$my-theme-warn: mat-palette($mat-deep-orange);
+
+$my-theme: mat-light-theme($my-theme-primary, $my-theme-accent, $my-theme-warn);
+@include angular-material-theme($my-theme);
+
+*,
+html,
+body {
+  box-sizing: border-box;
+  margin-right: 0rem;
+  margin-left: 0rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-top: 0rem;
+  font-family: var(--main-text-font);
+  // line-height: 1.5rem;
+  outline: none;
+}
+
+body,
+html {
+  width: 100%;
+  font-family: var(--main-text-font);
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0rem;
+  margin: 0;
+  font-size: 1rem;
+  color: var(--font);
+}
+
+html {
+  font-family: var(--main-text-font);
+  background-color: #fafafa;
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 700;
+  }
+}
+
+html {
+  .cdk-overlay-pane {
+    snack-bar-container {
+      background-color: #202020;
+
+      simple-snack-bar {
+        span {
+          color: white;
+          opacity: 1;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.bread-crumb-wrapper {
+  font-size: 14px;
+}
+
+a.xng-breadcrumb-link {
+  // text-decoration: underline;
+  cursor: pointer;
+}
+
+.xng-breadcrumb-root {
+  padding: 8px 16px;
+  display: inline;
+  border-radius: 0px;
+}
+
+.xng-breadcrumb-item {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.xng-breadcrumb-separator {
+  padding: 0px 0px;
+}
+
+label.xng-breadcrumb-trail {
+  margin-bottom: 0px;
+  color: black;
+  font-weight: 500;
+}
+
+.mat-progress-spinner.mat-accent circle,
+.mat-spinner.mat-accent circle {
+  stroke: blue !important;
+}

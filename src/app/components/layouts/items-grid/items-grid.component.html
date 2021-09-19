@@ -1,0 +1,22 @@
+<div class="card-wrapper">
+
+  <ng-container>
+    <ng-container *ngFor="let item of items">
+      <app-mat-card-hero [ngClass]="{'hidden': (item.isHidden)}" content="{{item.content}}" title="{{item.title}}"
+        [isHidden]=item.isHidden>
+      </app-mat-card-hero>
+    </ng-container>
+
+
+    <ng-container *ngFor="let item of items">
+      <app-mat-card-hero [ngClass]="{'hidden': (!item.isHidden || !show)}" content="{{item.content}}"
+        title="{{item.title}}" [isHidden]=item.isHidden id="elmnt">
+      </app-mat-card-hero>
+
+    </ng-container>
+  </ng-container>
+</div>
+
+<div style="width: 100%; justify-content: center; display: flex; padding-right: 20px;" *ngIf="!show">
+  <app-mat-btn-small text="Больше" (click)="toogleShow()"></app-mat-btn-small>
+</div>

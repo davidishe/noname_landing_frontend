@@ -1,0 +1,78 @@
+.st-btn {
+  cursor: pointer;
+  line-height: 3.8rem !important;
+  font-size: 14px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--c2);
+  color: white;
+  padding-right: 30px;
+  padding-left: 25px;
+  border-radius: 50px;
+  justify-content: space-around;
+  display: flex !important;
+  vertical-align: middle !important;
+  align-items: center !important;
+  border: 0px transparent solid;
+  color: whitesmoke;
+  transition: 0.8s;
+  overflow: hidden;
+
+  i {
+    font-size: 22px !important;
+    top: 0px !important;
+    position: relative;
+    margin-right: 5px;
+  }
+
+  .google-logo {
+    fill: white;
+    stroke: white;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    margin-right: 5px;
+    top: -1px;
+  }
+}
+
+.st-btn:hover {
+  background-color: var(--c2-hover);
+  color: white;
+}
+
+.st-btn:disabled {
+  background-color: darkgray;
+  cursor: initial;
+}
+
+.st-btn-login {
+  min-width: 300px;
+  width: 100%;
+  justify-content: center;
+}
+
+.st-btn-login-facebook {
+  background-color: #3a599d;
+}
+
+.st-btn-login-facebook:hover {
+  background-color: #315196 !important;
+}
+
+.st-btn-login-google {
+  background-color: #d94721;
+}
+.st-btn-login-google:hover {
+  background-color: #c43b19 !important;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: right;
+  width: 100%;
+}
+
+.mat-btn-wrapper {
+  display: flex;
+}

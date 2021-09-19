@@ -1,0 +1,95 @@
+<app-layer *ngIf="status$ === 'loading'"></app-layer>
+<div class="wrapper">
+  <div class="container">
+    <nav class="nav-app">
+      <div class="nav-title" [routerLink]="['/']">
+        <div class="circle"></div>
+        либерти
+      </div>
+
+      <div class="nav-content">
+        <span class="nav-item nav-desctop" routerLinkActive="active-menu"
+          [ngClass]="{'nav-item-hover': isMenuActive(1)}" (mouseover)="toogleMenu($event, 1);"
+          (click)="toogleMenu($event, 1)">
+          Услуги
+          <i class="material-icons" *ngIf="menuBlock !== 1">expand_more</i>
+          <i class="material-icons" *ngIf="menuBlock === 1">expand_less</i>
+        </span>
+
+        <span class="nav-item nav-item-link nav-desctop" routerLinkActive="active-menu" (mouseover)="isMenuActive(2)"
+          [routerLink]="[ '/shop' ]" routerLinkActive="active-menu">
+          Блог
+          <i class="material-icons">keyboard_arrow_right</i>
+        </span>
+
+        <span class="nav-item nav-item-link nav-desctop" routerLinkActive="active-menu" (mouseover)="isMenuActive(3)"
+          [routerLink]="[ '/about' ]" routerLinkActive="active-menu">
+          О проекте
+          <i class="material-icons">keyboard_arrow_right
+          </i>
+        </span>
+
+        <!-- раздел для логина и пароля -->
+        <div class="nav-pro">
+          <a href="tel:+79955094999" class="nav-pro-item nav-item-search" style="color: black;">
+            <div class="phone nav-hidden nav-desctop">
+              8 (800) 000 22 00
+            </div>
+            <i class="material-icons">call</i>
+          </a>
+
+          <!-- функционал для поиска закомментирован -->
+          <!-- <div class="nav-pro-item nav-item-search" *ngIf="!isSearching"
+            (click)="isSearching = !isSearching;     this.menuBlock = 0;">
+            <i class="material-icons">search</i>
+          </div>
+          <div class="nav-pro-item nav-item-search" *ngIf="isSearching" (click)="isSearching = !isSearching">
+            <i class="material-icons">close</i>
+          </div> -->
+          <!-- функционал для поиска закомментирован -->
+
+          <app-mat-btn-small class="login-btn" *ngIf="!(currentUser$ | async)" [routerLink]="['/account' ]"
+            text="Войти">
+          </app-mat-btn-small>
+
+          <div class="nav-pro-item nav-item-user">
+            <div id="userinfo" (click)="scrollMenuVisibilitty = !scrollMenuVisibilitty">
+              <div *ngIf="(currentUser$ | async)" (click)="topMenu = !topMenu">
+                <div class="img-wrapper" *ngIf="(currentUser$ | async)">
+                  <img id="userinfo" *ngIf="(currentUser$ | async).photoUrl" src="{{(currentUser$ | async).photoUrl}}">
+                </div>
+                <i id="userinfo" class="material-icons" *ngIf="!(currentUser$ | async).photoUrl">
+                  person
+                </i>
+              </div>
+            </div>
+            <app-scroll-menu [ngClass]="{'hidden': scrollMenuVisibilitty}"></app-scroll-menu>
+          </div>
+          <!-- мобильное меню -->
+          <span class="material-icons nav-mobile" *ngIf="menuBlock !== 4" (click)="menuBlock = 4; isSearching = false">
+            menu
+          </span>
+          <span class="material-icons nav-mobile" *ngIf="menuBlock === 4" (click)="menuBlock = 0">
+            close
+          </span>
+          <!-- end мобильное меню -->
+        </div>
+      </div>
+
+      <!-- раздел для логина и пароля -->
+      <app-search style="width: 100%; top: 6px; position: absolute; right: 0px;" [ngClass]="{'hidden': !isSearching}"
+        [isSearching]="isSearching" (valueChange)='checkOnSearching($event)'></app-search>
+
+    </nav>
+  </div>
+</div>
+
+<app-nav-menu-research class="app-nav-menu-research" *ngIf="menuBlock === 1" (valueChange)='displayCounter($event)'>
+</app-nav-menu-research>
+
+<app-nav-menu-research class="app-nav-menu-research" *ngIf="menuBlock === 4" (valueChange)='displayCounter($event)'>
+</app-nav-menu-research>
+
+<div class="layout" *ngIf="isSearching">
+
+</div>

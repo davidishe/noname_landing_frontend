@@ -1,0 +1,68 @@
+<div class="page-wrapper">
+  <app-banner></app-banner>
+
+  <!-- Content Row -->
+
+  <div class="container">
+    <app-mat-card-big></app-mat-card-big>
+  </div>
+
+
+  <div class="container" style="padding-right: 0px;" *ngIf="items">
+    <app-title text="Услуги" subtext="Мы предоставляем широкий комплекс услуг как для граждан так и для бизнеса">
+    </app-title>
+
+    <app-items-grid [items]="items"></app-items-grid>
+
+  </div>
+
+
+  <div class="container">
+    <app-title text="Результаты"
+      subtext="Наша цель - оказание качественных юридических услуг с индивидуальным подходом к каждому клиенту. Доверьте решение ваших самых сложных вопросов профессионалам - мы с удовольствием сделаем всю юридическую работу за вас! В основе нашего имени лежит надежная защиты ваших прав!">
+    </app-title>
+
+    <animated-digit-grid></animated-digit-grid>
+  </div>
+
+
+
+  <div class="container">
+    <app-title text="Команда"
+      subtext="Мы ценим своих клиентов, поэтому для качественного и быстрого решения их вопросов находимся в постоянном взаимодействии с компаниями-партнерами в самых различных областях.">
+    </app-title>
+  </div>
+  <team></team>
+
+
+
+  <div class="container">
+    <blog></blog>
+  </div>
+
+  <div class="container">
+    <app-title text="Наши партнеры"
+      subtext="Мы ценим своих клиентов, поэтому для качественного и быстрого решения их вопросов находимся в постоянном взаимодействии с компаниями-партнерами в самых различных областях.">
+    </app-title>
+  </div>
+  <mat-carousel></mat-carousel>
+
+
+
+  <div class="container">
+    <app-title text="Как нас найти" subtext="Заходите в гости пообщаться и обсудить вашу задачу">
+    </app-title>
+    <app-map></app-map>
+  </div>
+
+
+  <div class="container" id="feedback">
+    <app-title text="Расскажите нам вашу задачу" subtext="Мы в течение суток свяжемся с вами и подберем план действий">
+    </app-title>
+
+    <app-feedback></app-feedback>
+  </div>
+
+
+
+</div>

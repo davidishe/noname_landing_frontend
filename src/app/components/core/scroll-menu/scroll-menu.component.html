@@ -1,0 +1,45 @@
+<div class="nav-item-user-spec-menu">
+  <div class="city-change" id="top_menu">
+    <ul>
+      <li routerLinkActive="active-menu" [routerLink]="['/config']">
+        <a>
+          <i class="material-icons">face</i>
+          Профиль
+        </a>
+      </li>
+      <li routerLinkActive="active-menu" [routerLink]="['/orders']">
+        <a>
+          <i class="material-icons">local_shipping</i>
+          Мои покупки
+        </a>
+      </li>
+      <li>
+        <a (click)="logout()">
+          <i class="material-icons">exit_to_app</i>
+          Выйти
+        </a>
+      </li>
+
+      <!-- <div *ngIf="accountService.checkAdminRights()"> -->
+      <li routerLinkActive="active-menu" [routerLink]="['/admin/products']">
+        <a>
+          <i class="material-icons">list</i>
+          Список продуктов
+        </a>
+      </li>
+      <li routerLinkActive="active-menu" [routerLink]="['/config']">
+        <a>
+          <i class="material-icons">category</i>
+          Настройки продуктов
+        </a>
+      </li>
+      <li>
+        <a>
+          <i class="material-icons">supervised_user_circle</i>
+          Пользователи
+        </a>
+      </li>
+      <!-- </div> -->
+    </ul>
+  </div>
+</div>

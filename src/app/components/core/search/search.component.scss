@@ -1,0 +1,75 @@
+.products-control-wrapper {
+  .search {
+    margin-left: auto;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding-left: 0px !important;
+    max-width: none !important;
+
+    .example-full-width {
+      width: 100%;
+    }
+
+    .mat-icon {
+      top: 5px;
+      padding-left: 4px;
+      padding-right: 4px;
+      position: relative;
+      font-size: 22px;
+      cursor: pointer;
+    }
+  }
+}
+
+//TODO: не работает! что-то с приоритетом стилей
+.mat-form-field-appearance-legacy,
+.mat-form-field-infix {
+  padding-top: 0.13em !important;
+  padding-bottom: 0.13em !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0.5em 0 !important;
+}
+
+.products-control-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  vertical-align: middle;
+  position: absolute;
+  padding-left: 40px;
+  padding-right: 40px;
+  top: 60px;
+  background-color: #fff;
+  left: 0px;
+  box-shadow: var(--shadow-hover);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  justify-content: center;
+}
+
+.search {
+  padding-left: 0px !important;
+  max-width: none !important;
+}
+
+@media (max-width: 700px) {
+  .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: 0.5em 0 !important;
+  }
+}
+
+@media (max-width: 563px) {
+  .products-control-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -1,0 +1,171 @@
+{
+    "Data": {
+        "Transaction": [
+            {
+                "accountId": "100201",
+                "transactionId": "125",
+                "transactionReference": "Ref 125",
+                "creditDebitIndicator": "Credit",
+                "status": "Booked",
+                "bookingDateTime": "2020-07-03T20:12:19+03:00",
+                "valueDateTime": "2020-07-03T20:12:19+03:00",
+                "transactionInformation": "Оплата штрафов ГИБДД",
+                "addressLine": "Шлюзовая",
+                "Amount": {
+                    "amount": "2500.00",
+                    "currency": "RUB"
+                },
+                "BankTransactionCode": {
+                    "code": "IssuedCreditTransfer",
+                    "subCode": "AutomaticTransfer"
+                },
+                "ProprietaryBankTransactionCode": {
+                    "code": "DirectDebit",
+                    "issuer": "Bank"
+                },
+                "Balance": {
+                    "creditDebitIndicator": "Debit",
+                    "type": "OpeningAvailable",
+                    "Amount": {
+                        "amount": "3257.36",
+                        "currency": "RUB"
+                    }
+                }
+            },
+            {
+                "accountId": "100201",
+                "transactionId": "128",
+                "transactionReference": "Ref 128",
+                "creditDebitIndicator": "Credit",
+                "status": "Booked",
+                "bookingDateTime": "2020-07-06T08:10:49+03:00",
+                "valueDateTime": "2020-07-06T08:10:49+03:00",
+                "transactionInformation": "Онлайн покупка мелкой бытовой техники",
+                "addressLine": "Шлюзовая",
+                "Amount": {
+                    "amount": "999.99",
+                    "currency": "RUB"
+                },
+                "BankTransactionCode": {
+                    "code": "IssuedCreditTransfer",
+                    "subCode": "AutomaticTransfer"
+                },
+                "ProprietaryBankTransactionCode": {
+                    "code": "DirectDebit",
+                    "issuer": "Bank"
+                },
+                "Balance": {
+                    "creditDebitIndicator": "Debit",
+                    "type": "OpeningAvailable",
+                    "Amount": {
+                        "amount": "1257.36",
+                        "currency": "RUB"
+                    }
+                }
+            },
+            {
+                "accountId": "100201",
+                "transactionId": "132",
+                "transactionReference": "Ref 132",
+                "creditDebitIndicator": "Credit",
+                "status": "Booked",
+                "bookingDateTime": "2020-07-06T21:30:15+03:00",
+                "valueDateTime": "2020-07-06T21:30:15+03:00",
+                "transactionInformation": "Оплата в кофейне",
+                "addressLine": "Шлюзовая",
+                "Amount": {
+                    "amount": "700.00",
+                    "currency": "RUB"
+                },
+                "BankTransactionCode": {
+                    "code": "IssuedCreditTransfer",
+                    "subCode": "AutomaticTransfer"
+                },
+                "ProprietaryBankTransactionCode": {
+                    "code": "DirectDebit",
+                    "issuer": "Bank"
+                },
+                "Balance": {
+                    "creditDebitIndicator": "Debit",
+                    "type": "OpeningAvailable",
+                    "Amount": {
+                        "amount": "1257.36",
+                        "currency": "RUB"
+                    }
+                }
+            },
+            {
+                "accountId": "100201",
+                "transactionId": "135",
+                "transactionReference": "Ref 135",
+                "creditDebitIndicator": "Credit",
+                "status": "Booked",
+                "bookingDateTime": "2020-07-13T07:25:31+03:00",
+                "valueDateTime": "2020-07-13T07:25:31+03:00",
+                "transactionInformation": "Оплата такси",
+                "addressLine": "Шлюзовая",
+                "Amount": {
+                    "amount": "450.00",
+                    "currency": "RUB"
+                },
+                "BankTransactionCode": {
+                    "code": "IssuedCreditTransfer",
+                    "subCode": "AutomaticTransfer"
+                },
+                "ProprietaryBankTransactionCode": {
+                    "code": "DirectDebit",
+                    "issuer": "Bank"
+                },
+                "Balance": {
+                    "creditDebitIndicator": "Debit",
+                    "type": "OpeningAvailable",
+                    "Amount": {
+                        "amount": "1257.36",
+                        "currency": "RUB"
+                    }
+                }
+            },
+            {
+                "accountId": "100201",
+                "transactionId": "138",
+                "transactionReference": "Ref 138",
+                "creditDebitIndicator": "Credit",
+                "status": "Booked",
+                "bookingDateTime": "2020-07-16T11:28:14+03:00",
+                "valueDateTime": "2020-07-16T11:28:14+03:00",
+                "transactionInformation": "Оплата госпошлины онлайн",
+                "addressLine": "Шлюзовая",
+                "Amount": {
+                    "amount": "245.00",
+                    "currency": "RUB"
+                },
+                "BankTransactionCode": {
+                    "code": "IssuedCreditTransfer",
+                    "subCode": "AutomaticTransfer"
+                },
+                "ProprietaryBankTransactionCode": {
+                    "code": "DirectDebit",
+                    "issuer": "Bank"
+                },
+                "Balance": {
+                    "creditDebitIndicator": "Debit",
+                    "type": "OpeningAvailable",
+                    "Amount": {
+                        "amount": "1257.36",
+                        "currency": "RUB"
+                    }
+                }
+            }
+        ]
+    },
+    "Risk": {},
+    "Links": {
+        "self": "https://openapi.ekassir.com:950/sandbox0/open-banking/transactions?page=1",
+        "first": "https://openapi.ekassir.com:950/sandbox0/open-banking/transactions?page=1",
+        "next": "https://openapi.ekassir.com:950/sandbox0/open-banking/transactions?page=2",
+        "last": "https://openapi.ekassir.com:950/sandbox0/open-banking/transactions?page=6"
+    },
+    "Meta": {
+        "totalPages": 6
+    }
+}

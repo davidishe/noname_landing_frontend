@@ -1,0 +1,20 @@
+p,
+a,
+label,
+div {
+  font-family: "IBM Plex Sans", sans-serif !important;
+}
+
+:root {
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.1);
+  --font-title: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-title);
+}

@@ -1,0 +1,51 @@
+<!-- <span class="material-icons" *ngIf="!isMenuOpen">arrow_drop_down</span>
+
+
+
+
+
+
+
+<nav class="nav-wrapper">
+
+  <div class="nav-title" href="#">
+    Идеи
+  </div>
+
+  <div class="navbar-items">
+
+    <form class="form-label-group input-group" style="padding-right: 30px; padding-left: 20px;">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          <span class="material-icons">
+            search
+          </span>
+        </span>
+      </div>
+      <input type="text" class="form-control fix-rounded-right" placeholder="Найти">
+    </form>
+
+    <button *ngIf="!(currentUser$ | async)" [routerLink]="[ '/account/login' ]" class="btn-login">
+      <span class="material-icons">
+        account_circle
+      </span>
+      Войти
+    </button>
+
+    <div *ngIf="(currentUser$ | async)">
+      <button (click)="toogleMenu()">
+        <span class="material-icons" style="color: var(--c1);">
+          account_circle
+        </span>
+        Привет, <b>{{(currentUser$ | async).displayName}}</b>
+        <span class="material-icons" *ngIf="!isMenuOpen">arrow_drop_down</span>
+        <span class="material-icons" *ngIf="isMenuOpen">arrow_drop_up</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+<div class="menu-layer" *ngIf="isMenuOpen"></div>
+<app-nav-menu-open *ngIf="isMenuOpen"></app-nav-menu-open> -->
+<!-- end nav -->

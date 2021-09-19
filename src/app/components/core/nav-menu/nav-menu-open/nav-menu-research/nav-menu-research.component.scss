@@ -1,0 +1,58 @@
+.overlay {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  top: 0px;
+}
+
+.menu-content {
+  padding: 15px;
+  background-color: white;
+  box-shadow: var(--shadow-hover);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  border-radius: 25px;
+}
+
+.menu {
+  padding: 20px 20px;
+  background-color: transparent;
+  background-color: rgb(241, 241, 241);
+  z-index: 100;
+  width: 100vw;
+  min-height: calc(100% - 60px);
+  position: absolute;
+  top: 60px;
+}
+
+p {
+  padding: 0.8em 2em 0.8em 1em;
+  font-weight: bold;
+  color: var(--c2);
+  pointer-events: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-right: 40px;
+
+  li {
+    a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      padding: 0.8em 2em 0.8em 1em;
+      font-size: 0.9em;
+      border-radius: 10px;
+
+      &:hover {
+        color: var(--c2);
+        background-color: var(--c2-hover-light);
+      }
+    }
+  }
+}

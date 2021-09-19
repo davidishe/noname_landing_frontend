@@ -1,0 +1,37 @@
+.picture-wrapper {
+  min-width: 200px;
+  max-width: 380px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 100%;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .img-wrapper {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+
+    .img {
+      max-width: 100%;
+      top: 0px;
+      position: relative;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .picture-wrapper {
+    min-width: 100px;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 770px) {
+  .picture-wrapper {
+    max-width: 200px;
+  }
+}

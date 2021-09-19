@@ -1,0 +1,7 @@
+<div class="products-control-wrapper" *ngIf="isSearching">
+  <div class="search">
+    <mat-form-field class="example-full-width" floatLabel="never">
+      <input matInput type="text" #search placeholder="Поиск по сайту" (keydown.enter)="onSearch()">
+    </mat-form-field>
+  </div>
+</div>

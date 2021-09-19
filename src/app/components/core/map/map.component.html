@@ -1,0 +1,23 @@
+<div *ngIf="(apiLoaded | async)">
+  <google-map height="500px" width="100%" [options]="options" [center]="options.center">
+    <!-- <map-marker #mapMarker [position]="marker.position" [label]='marker.label' [title]="marker.title"
+      (mapClick)="openInfoWindow(marker)">
+    </map-marker> -->
+
+    <map-marker #marker="mapMarker" [position]="mapMarker.position" (mapMouseover)="openInfoWindow(marker)">
+    </map-marker>
+    <map-info-window>
+      <div class="map-info-content">
+        <b>
+          Мы находимся здесь
+        </b>
+        <p>
+          <a class="about-link" [routerLink]="[ '/about' ]">Узнать как добраться</a>
+        </p>
+      </div>
+    </map-info-window>
+
+  </google-map>
+
+
+</div>

@@ -1,0 +1,92 @@
+<div class="feedback-wrapper">
+  <form [formGroup]="formFeedback" (ngSubmit)="onSubmit()" *ngIf="sendingStatus === 'initial'">
+
+    <mat-form-field floatLabel="never" appearance="outline" floatLabel="always">
+      <mat-label>Ваше имя</mat-label>
+      <input class="mat-input-login" matInput type="text" formControlName="name" placeholder="Василий Цветков">
+
+      <mat-hint class="mat-hint">
+        <div class="validator" *ngIf="formFeedback.get('name').touched && formFeedback.get('name').invalid">
+          <span *ngIf="formFeedback.get('name').hasError('required')">
+            Введите как вас зовут
+          </span>
+        </div>
+      </mat-hint>
+    </mat-form-field>
+
+
+    <mat-form-field floatLabel="never" appearance="outline" floatLabel="always">
+      <mat-label>Телефон</mat-label>
+      <input class="mat-input-login" [imask]="{mask: '+{7}(000)000-00-00'}" [unmask]="false" matInput type="text"
+        placeholder="+7(995)5094455" formControlName="phone">
+
+      <mat-hint class="mat-hint">
+        <div class="validator" *ngIf="formFeedback.get('phone').touched && formFeedback.get('phone').invalid">
+
+          <span *ngIf="formFeedback.get('phone').hasError('required')">
+            Введите не пустой телефон
+          </span>
+          <span *ngIf="formFeedback.get('phone').hasError('email')">
+            Введите корректный телефон
+          </span>
+        </div>
+      </mat-hint>
+    </mat-form-field>
+    <br>
+
+
+    <mat-form-field appearance="outline" floatLabel="always">
+      <mat-label>Подробный вопрос</mat-label>
+      <!-- <input class="mat-input-login" [type]="isActive ? 'password' : 'text'"> -->
+      <textarea matInput formControlName="description" cols="30" rows="10"></textarea>
+      <mat-hint class="mat-hint">
+
+        <div class="validator"
+          *ngIf="formFeedback.get('description').touched && formFeedback.get('description').invalid">
+
+          <span *ngIf="formFeedback.get('description').hasError('required')">
+            Описание не может быть пустым
+          </span>
+
+        </div>
+      </mat-hint>
+    </mat-form-field>
+
+    <br>
+
+
+    <div class="mat-btn-wrapper" style="justify-content: flex-end;">
+      <button class="st-btn" type="submit" [disabled]="formFeedback.invalid || disabled" (click)="onSubmit()">
+        <i class="material-icons" aria-hidden="false" aria-label="Example home icon">
+          keyboard_arrow_right
+        </i>
+        Отправить
+      </button>
+    </div>
+  </form>
+
+  <div class="feedback-result-wrapper" *ngIf="sendingStatus === 'pending'">
+    <div class="feedback-result">
+      <div class="feedback-status">
+        <!-- <span class="material-icons">
+          mark_email_read
+        </span> -->
+        <!-- Please refer: https://github.com/shubhamjain/svg-loader -->
+        <mat-spinner [diameter]="40"></mat-spinner>
+      </div>
+
+      <div class="feedback-title">Сообщение отправляется ...</div>
+    </div>
+  </div>
+
+  <div class="feedback-result-wrapper" *ngIf="sendingStatus === 'completed'">
+    <div class="feedback-result">
+      <div class="feedback-status">
+        <span class="material-icons">
+          mark_email_read
+        </span>
+      </div>
+      <div class="feedback-title">Сообщение отправлено</div>
+    </div>
+  </div>
+</div>

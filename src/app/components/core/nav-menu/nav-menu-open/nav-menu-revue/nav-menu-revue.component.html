@@ -1,0 +1,47 @@
+<div class="menu-items-wrapper">
+  <div class="container">
+    <div class="menu-items-element-wrapper">
+      <span class="menu-items-element" routerLinkActive="active-menu" [routerLink]="['/account/profile']"
+        (click)="closeMenu()">
+        Revue
+        <i class="material-icons">face</i>
+      </span>
+      <span class="menu-items-element" routerLinkActive="active-menu" [routerLink]="['/account/profile']"
+        (click)="closeMenu()">
+        Профиль
+        <i class="material-icons">face</i>
+      </span>
+      <span class="menu-items-element" routerLinkActive="active-menu" [routerLink]="['/content/fintech']"
+        (click)="closeMenu()">
+        Финтех
+        <i class="material-icons">face</i>
+      </span>
+      <span class="menu-items-element" routerLinkActive="active-menu" [routerLink]="['/content/revue']"
+        (click)="closeMenu()">
+        Обзор
+        <i class="material-icons">article</i>
+      </span>
+      <span class="menu-items-element" routerLinkActive="active-menu" [routerLink]="['/content/onboarding']"
+        (click)="closeMenu()">
+        Онбординг
+        <i class="material-icons">supervised_user_circle</i>
+      </span>
+      <span class="menu-items-element" routerLinkActive="active-menu" [routerLink]="['/content/compare']"
+        (click)="closeMenu()">
+        Сравнение
+        <i class="material-icons">supervised_user_circle</i>
+      </span>
+      <span class="menu-items-element" routerLinkActive="active-menu" [routerLink]="['/content/buggs']"
+        (click)="closeMenu()">
+        Баги
+        <i class="material-icons">supervised_user_circle</i>
+      </span>
+      <span class="menu-items-element" (click)="logout()" (click)="closeMenu()">
+        Выйти
+        <i class="material-icons">exit_to_app</i>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="menu-layer"></div>

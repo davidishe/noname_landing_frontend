@@ -1,0 +1,29 @@
+* {
+  transition: ease-out all 0.07s;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  margin: 0rem 0rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+  padding-top: 0px;
+}
+
+/* хром, сафари */
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ie 10+ */
+* {
+  -ms-overflow-style: none;
+}

@@ -1,0 +1,45 @@
+form {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  font-size: 15px;
+
+  .label {
+    color: black;
+  }
+
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .mat-form-field-wrapper {
+      width: 100%;
+    }
+
+    .mat-input-login {
+      top: -3px;
+      position: relative;
+    }
+  }
+
+  .mat-hint {
+    .validator {
+      color: var(--main-theme-color-error);
+      right: 12px;
+      position: relative;
+    }
+  }
+}
+
+.login-info {
+  margin-left: 20px;
+  cursor: pointer;
+  color: #202020;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-info:hover {
+  color: black;
+  text-decoration: underline;
+}

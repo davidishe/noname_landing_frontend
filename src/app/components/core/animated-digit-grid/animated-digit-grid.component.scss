@@ -1,0 +1,19 @@
+.digits-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+@media (max-width: 1120px) {
+  .digits-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .digits-wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}
